@@ -11,64 +11,95 @@
         .serif { font-family: 'Playfair Display', serif; }
         .gold-text { color: #D4AF37; }
         .gold-bg { background-color: #D4AF37; }
-        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
         .gradient-gold { background: linear-gradient(135deg, #D4AF37 0%, #F1D38E 100%); }
-        input:focus, textarea:focus { border-color: #D4AF37 !important; }
+        input, textarea { border-color: rgba(212, 175, 55, 0.2) !important; }
+        input:focus, textarea:focus { border-color: #D4AF37 !important; border-bottom-width: 2px; }
     </style>
 </head>
-<body class="antialiased">
+<body>
 
-    <nav class="fixed w-full z-50 px-6 py-4 flex justify-between items-center glass">
-        <div class="serif text-xl font-bold tracking-tighter gold-text">THE READING INDEX</div>
-        <div class="hidden md:flex space-x-8 text-xs uppercase tracking-widest font-semibold">
-            <a href="#about" class="hover:text-gold-text transition">The Story</a>
-            <a href="#mission" class="hover:text-gold-text transition">Mission</a>
-            <a href="#contact" class="px-5 py-2 gold-bg text-black rounded-sm hover:opacity-90 transition">Inquire</a>
+    <nav class="fixed w-full z-50 px-6 md:px-12 py-6 flex justify-between items-center glass">
+        <div class="serif text-xl md:text-2xl font-bold tracking-tighter gold-text">THE READING INDEX</div>
+        <div class="hidden md:flex space-x-10 text-xs uppercase tracking-[0.2em]">
+            <a href="#about" class="hover:text-gold-text transition duration-300">The Mission</a>
+            <a href="#testimonials" class="hover:text-gold-text transition duration-300">Reviews</a>
+            <a href="#contact" class="px-8 py-3 gold-bg text-black font-bold rounded-sm hover:bg-white transition duration-500">Inquire</a>
         </div>
     </nav>
 
-    <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 relative overflow-hidden">
-        <div class="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=2070')] bg-cover bg-center"></div>
-        <h1 class="serif text-5xl md:text-8xl mb-6 relative z-10 leading-tight">Your Words. <br><span class="italic gold-text">Our Masterpiece.</span></h1>
-        <p class="max-w-xl text-gray-400 text-sm md:text-base mb-10 relative z-10 uppercase tracking-[0.3em]">Architecting the digital presence of world-class authors.</p>
-        <div class="flex flex-col md:flex-row gap-4 relative z-10">
-            <a href="#contact" class="px-10 py-4 gradient-gold text-black font-bold uppercase tracking-widest hover:scale-105 transition">Start Building</a>
-            <a href="mailto:leecrowninc@gmail.com" class="px-10 py-4 border border-zinc-700 hover:border-gold-text transition uppercase tracking-widest text-sm flex items-center justify-center">Email Us</a>
-        </div>
-    </section>
-
-    <section id="mission" class="py-24 px-6 bg-[#0c0c0c]">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
-            <div class="p-10 border border-zinc-900 bg-black">
-                <h3 class="serif text-3xl mb-4 gold-text">The Mission</h3>
-                <p class="text-gray-500 leading-relaxed">To curate and elevate the online identity of literary creators, providing them with a platform as sophisticated and enduring as their written work.</p>
-            </div>
-            <div class="p-10 border border-zinc-900 bg-black">
-                <h3 class="serif text-3xl mb-4 gold-text">The Vision</h3>
-                <p class="text-gray-500 leading-relaxed">To become the world's most sought-after digital architect for the intellectual elite, defining the future of author-reader engagement.</p>
+    <section class="h-screen flex flex-col justify-center items-center text-center px-6 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=2046&auto=format&fit=crop')] bg-cover bg-center"></div>
+        <div class="relative z-10">
+            <h1 class="serif text-5xl md:text-8xl mb-6 leading-tight">Architects of <br><span class="italic gold-text">Literary Distinction</span></h1>
+            <p class="max-w-xl mx-auto text-gray-400 text-sm md:text-lg mb-10 uppercase tracking-[0.3em]">Where your manuscript becomes a masterpiece.</p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#contact" class="px-12 py-4 border border-white hover:bg-white hover:text-black transition-all duration-500 tracking-widest uppercase text-xs font-bold">Start Building</a>
+                <a href="mailto:leecrowninc@gmail.com" class="px-12 py-4 gold-bg text-black hover:opacity-90 transition-all duration-500 tracking-widest uppercase text-xs font-bold">Email Us</a>
             </div>
         </div>
     </section>
 
-    <section class="py-24 px-6">
-        <h2 class="serif text-center text-4xl mb-16 gold-text">Acclaimed Reflections</h2>
-        <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div class="p-8 glass italic text-gray-400 border-l-4 border-gold-text">
-                "The Reading Index understands that an author's website is their digital sanctuary. They delivered beyond expectation."
-                <span class="block mt-4 not-italic font-bold text-white">— Literary Reviewer</span>
+    <section id="about" class="py-32 px-6 md:px-24 bg-[#0d0d0d]">
+        <div class="grid lg:grid-cols-2 gap-20 items-center">
+            <div>
+                <h2 class="serif text-4xl md:text-6xl mb-8">Elevating the <span class="gold-text">Writer's</span> Voice.</h2>
+                <p class="text-gray-400 text-lg leading-relaxed mb-6">Inspired by <em>The Reading Index Portfolio</em>, we curate digital environments that reflect the depth of your narrative.</p>
             </div>
-            <div class="p-8 glass italic text-gray-400 border-l-4 border-gold-text">
-                "A seamless blend of luxury and functionality. My audience engagement has tripled since the launch."
-                <span class="block mt-4 not-italic font-bold text-white">— Bestselling Author</span>
-            </div>
-            <div class="p-8 glass italic text-gray-400 border-l-4 border-gold-text">
-                "Exquisite design meets technical precision. They are the only choice for serious writers."
-                <span class="block mt-4 not-italic font-bold text-white">— Editorial Director</span>
+            <div class="space-y-8">
+                <div class="p-10 glass rounded-lg">
+                    <h3 class="serif text-2xl gold-text mb-4">Our Mission</h3>
+                    <p class="text-sm text-gray-400 leading-loose uppercase tracking-wider">To provide authors with elite, non-generic digital homes that convert readers into lifelong patrons.</p>
+                </div>
+                <div class="p-10 border border-zinc-800 rounded-lg">
+                    <h3 class="serif text-2xl gold-text mb-4">Our Vision</h3>
+                    <p class="text-sm text-gray-400 leading-loose uppercase tracking-wider">Defining the future of literary branding through luxury aesthetics and high-performance technology.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="about" class="py-24 px-6 bg-black border-y border-zinc-900">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="serif text-4xl mb-8 gold-text">The Architects</h2>
-            <p class="text-gray-400 text
+    <section id="testimonials" class="py-32 px-6 md:px-24">
+        <h2 class="serif text-center text-4xl md:text-6xl mb-20 italic">Acclaimed Perspectives</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="p-8 bg-zinc-900/50 border border-zinc-800 italic text-gray-300">
+                "The Reading Index didn't just build a site; they created a digital sanctuary for my work. Truly 10/10 service."
+                <span class="block mt-6 not-italic font-bold gold-text text-sm">— ELITE AUTHOR REVIEW</span>
+            </div>
+            <div class="p-8 bg-zinc-900/50 border border-zinc-800 italic text-gray-300">
+                "Sophisticated, sleek, and high-performing. My book sales increased noticeably after the launch."
+                <span class="block mt-6 not-italic font-bold gold-text text-sm">— PORTFOLIO FEEDBACK</span>
+            </div>
+            <div class="p-8 bg-zinc-900/50 border border-zinc-800 italic text-gray-300">
+                "Finally, a service that understands the luxury of quiet, powerful design. Highly recommended."
+                <span class="block mt-6 not-italic font-bold gold-text text-sm">— LITERARY CRITIC</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-32 px-6 md:px-24 max-w-5xl mx-auto">
+        <div class="text-center mb-20">
+            <h2 class="serif text-5xl md:text-7xl mb-6">Contact Us</h2>
+            <p class="text-gray-500 uppercase tracking-widest text-sm">Secure your position in the literary elite.</p>
+        </div>
+        
+        <form action="https://formspree.io/f/xdalqeqq" method="POST" id="contact-form" class="grid md:grid-cols-2 gap-10">
+            <div class="space-y-10">
+                <input type="text" name="name" placeholder="FULL NAME" required class="w-full bg-transparent border-b border-zinc-800 py-4 focus:outline-none transition-all placeholder:text-zinc-700">
+                <input type="email" name="_replyto" placeholder="EMAIL ADDRESS" required class="w-full bg-transparent border-b border-zinc-800 py-4 focus:outline-none transition-all placeholder:text-zinc-700">
+            </div>
+            <div class="space-y-10">
+                <textarea name="message" placeholder="TELL US ABOUT YOUR PROJECT" rows="4" class="w-full bg-transparent border-b border-zinc-800 py-4 focus:outline-none transition-all placeholder:text-zinc-700"></textarea>
+                <button type="submit" class="w-full py-5 gradient-gold text-black font-black uppercase tracking-[0.3em] hover:scale-[1.02] transition-transform shadow-xl">Send Inquiry</button>
+            </div>
+        </form>
+    </section>
+
+    <footer class="py-20 border-t border-zinc-900 px-6 text-center">
+        <div class="serif text-2xl gold-text mb-4">THE READING INDEX TEAM</div>
+        <p class="text-xs text-zinc-600 uppercase tracking-widest leading-loose">Elite Craftsmanship &copy; 2026. <br> Powered by Lee Crown Inc.</p>
+    </footer>
+
+    <a href="https://wa.me/15739142195" target="_blank" class="fixed bottom-8 right-8 z-50 bg-[#25D366] p-4 rounded-full shadow-2xl hover:scale-110 transition-transform active:scale-95">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" viewBox="0 0 16 16">
+            <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.96L0 16l4.204-1.102a7.933 7.933 0 0 0 3
