@@ -1,84 +1,89 @@
-<section id="contact" class="py-24 px-6 max-w-3xl mx-auto">
-    <div class="text-center mb-12">
-        <h2 class="serif text-5xl mb-4 gold-text">Inquire</h2>
-        <p class="text-gray-500 uppercase tracking-widest text-xs">Bespoke Consultations Only</p>
-    </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Reading Index | Elite Author Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     
-    <div id="success-message" class="hidden opacity-0 transition-opacity duration-1000 text-center p-12 glass border-gold-text mb-8">
-        <div class="mb-4 flex justify-center">
-            <svg class="w-12 h-12 gold-text" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M5 13l4 4L19 7"></path>
+    <style>
+        /* Forced Reset to prevent the "Giant Icon" bug */
+        body { background-color: #0a0a0a !important; color: #ffffff !important; font-family: 'Inter', sans-serif; margin: 0; overflow-x: hidden; }
+        .serif { font-family: 'Playfair Display', serif; }
+        .gold-text { color: #D4AF37 !important; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        svg { max-width: 100%; height: auto; } /* Fixes the giant checkmark */
+        #success-message svg { width: 80px; height: 80px; margin: 0 auto; }
+    </style>
+</head>
+<body class="bg-[#0a0a0a]">
+
+    <nav class="fixed w-full z-50 px-6 py-4 flex justify-between items-center glass">
+        <div class="serif text-xl font-bold tracking-tighter gold-text">THE READING INDEX</div>
+        <a href="#contact" class="hidden md:block px-5 py-2 bg-[#D4AF37] text-black text-xs font-bold uppercase rounded-sm">Inquire</a>
+    </nav>
+
+    <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 relative">
+        <h1 class="serif text-5xl md:text-8xl mb-6 leading-tight">Your Words. <br><span class="italic gold-text">Our Masterpiece.</span></h1>
+        <p class="max-w-xl text-zinc-500 text-sm md:text-base mb-10 uppercase tracking-[0.3em]">Architecting the digital presence of world-class authors.</p>
+        <a href="#contact" class="px-10 py-4 bg-[#D4AF37] text-black font-bold uppercase tracking-widest hover:scale-105 transition">Start Building</a>
+    </section>
+
+    <section id="contact" class="py-24 px-6 max-w-3xl mx-auto">
+        <div id="success-message" class="hidden opacity-0 text-center p-12 glass border-[#D4AF37] mb-8 transition-all duration-1000">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2">
+                <path d="M5 13l4 4L19 7"></path>
             </svg>
+            <h3 class="serif text-3xl gold-text mt-4 mb-2">Message Dispatched</h3>
+            <p class="text-zinc-400 text-sm">Our architects will contact you shortly.</p>
         </div>
-        <h3 class="serif text-3xl gold-text mb-2">Message Dispatched</h3>
-        <p class="text-gray-400">Your vision has been securely transmitted. Our architects will contact you shortly.</p>
-    </div>
 
-    <form action="https://formspree.io/f/xdalqeqq" method="POST" id="luxury-form" class="space-y-8 transition-all duration-700">
-        <div class="grid md:grid-cols-2 gap-8">
-            <input type="text" name="name" id="name" placeholder="YOUR NAME" required class="w-full bg-transparent border-b border-zinc-800 py-4 focus:outline-none transition text-white placeholder-zinc-700">
-            <input type="email" name="email" id="email" placeholder="EMAIL ADDRESS" required class="w-full bg-transparent border-b border-zinc-800 py-4 focus:outline-none transition text-white placeholder-zinc-700">
-        </div>
-        <textarea name="message" id="message" placeholder="DESCRIBE YOUR VISION" rows="5" class="w-full bg-transparent border-b border-zinc-800 py-4 focus:outline-none transition text-white placeholder-zinc-700"></textarea>
-        
-        <button type="submit" id="submit-btn" class="relative w-full py-5 gradient-gold text-black font-bold uppercase tracking-[0.4em] hover:shadow-[0_0_25px_rgba(212,175,55,0.4)] transition-all overflow-hidden">
-            <span id="btn-text">Send Submission</span>
-            <div id="btn-loader" class="hidden absolute inset-0 flex items-center justify-center bg-[#D4AF37]">
-                <svg class="animate-spin h-6 w-6 text-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                </svg>
-            </div>
-        </button>
-    </form>
-</section>
+        <form action="https://formspree.io/f/xdalqeqq" method="POST" id="luxury-form" class="space-y-8 bg-black p-8 rounded-lg">
+            <input type="text" name="name" placeholder="YOUR NAME" required class="w-full bg-transparent border-b border-zinc-800 py-4 text-white focus:outline-none focus:border-[#D4AF37]">
+            <input type="email" name="email" placeholder="EMAIL ADDRESS" required class="w-full bg-transparent border-b border-zinc-800 py-4 text-white focus:outline-none focus:border-[#D4AF37]">
+            <textarea name="message" placeholder="DESCRIBE YOUR VISION" rows="4" class="w-full bg-transparent border-b border-zinc-800 py-4 text-white focus:outline-none focus:border-[#D4AF37]"></textarea>
+            
+            <button type="submit" id="submit-btn" class="w-full py-5 bg-[#D4AF37] text-black font-bold uppercase tracking-[0.4em] hover:opacity-90 transition relative">
+                <span id="btn-text">Send Submission</span>
+                <div id="btn-loader" class="hidden absolute inset-0 flex items-center justify-center bg-[#D4AF37]">
+                    <div class="w-6 h-6 border-4 border-black border-t-transparent rounded-full animate-spin"></div>
+                </div>
+            </button>
+        </form>
+    </section>
 
-<script>
-    const luxuryForm = document.getElementById('luxury-form');
-    const successBox = document.getElementById('success-message');
-    const btnText = document.getElementById('btn-text');
-    const btnLoader = document.getElementById('btn-loader');
-    const submitBtn = document.getElementById('submit-btn');
+    <a href="https://wa.me/15739142195" target="_blank" class="fixed bottom-8 right-8 z-50">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="w-14 h-14" alt="WhatsApp">
+    </a>
 
-    async function handleSubmit(event) {
-        event.preventDefault();
-        
-        // 1. Start Luxury Loading State
-        btnText.classList.add('opacity-0');
-        btnLoader.classList.remove('hidden');
-        submitBtn.disabled = true;
-        luxuryForm.style.pointerEvents = "none";
+    <script>
+        const form = document.getElementById('luxury-form');
+        const success = document.getElementById('success-message');
+        const btnText = document.getElementById('btn-text');
+        const btnLoader = document.getElementById('btn-loader');
 
-        const data = new FormData(event.target);
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            btnText.style.opacity = '0';
+            btnLoader.classList.remove('hidden');
 
-        try {
-            const response = await fetch(event.target.action, {
-                method: luxuryForm.method,
-                body: data,
+            const response = await fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
                 headers: { 'Accept': 'application/json' }
             });
 
             if (response.ok) {
-                // 2. Success Transition: Fade out form, Fade in success
-                luxuryForm.style.opacity = "0";
-                setTimeout(() => {
-                    luxuryForm.classList.add('hidden');
-                    successBox.classList.remove('hidden');
-                    // Trigger fade-in for success box
-                    setTimeout(() => successBox.classList.add('opacity-100'), 50);
-                }, 700);
+                form.style.display = 'none';
+                success.classList.remove('hidden');
+                setTimeout(() => success.style.opacity = '1', 50);
             } else {
-                throw new Error('Submission Failed');
+                alert("Error sending message.");
+                btnText.style.opacity = '1';
+                btnLoader.classList.add('hidden');
             }
-        } catch (error) {
-            // 3. Error Handling
-            btnText.classList.remove('opacity-0');
-            btnLoader.classList.add('hidden');
-            btnText.innerHTML = "RETRY SUBMISSION";
-            submitBtn.disabled = false;
-            luxuryForm.style.pointerEvents = "auto";
-        }
-    }
-    
-    luxuryForm.addEventListener("submit", handleSubmit);
-</script>
+        });
+    </script>
+</body>
+</html>
