@@ -6,82 +6,117 @@
     <title>The Reading Index | Elite Author Services</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    
     <style>
-        /* Forced Reset to prevent the "Giant Icon" bug */
-        body { background-color: #0a0a0a !important; color: #ffffff !important; font-family: 'Inter', sans-serif; margin: 0; overflow-x: hidden; }
+        body { font-family: 'Inter', sans-serif; background-color: #0a0a0a; color: #ffffff; scroll-behavior: smooth; }
         .serif { font-family: 'Playfair Display', serif; }
-        .gold-text { color: #D4AF37 !important; }
+        .gold-text { color: #D4AF37; }
+        .gold-bg { background-color: #D4AF37; }
         .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
-        svg { max-width: 100%; height: auto; } /* Fixes the giant checkmark */
-        #success-message svg { width: 80px; height: 80px; margin: 0 auto; }
+        /* Luxury Pen & Weather Background */
+        .hero-bg {
+            background: linear-gradient(to bottom, rgba(10,10,10,0.8), rgba(10,10,10,0.9)), 
+                        url('https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&q=80');
+            background-size: cover;
+            background-position: center;
+        }
     </style>
 </head>
-<body class="bg-[#0a0a0a]">
+<body>
 
-    <nav class="fixed w-full z-50 px-6 py-4 flex justify-between items-center glass">
-        <div class="serif text-xl font-bold tracking-tighter gold-text">THE READING INDEX</div>
-        <a href="#contact" class="hidden md:block px-5 py-2 bg-[#D4AF37] text-black text-xs font-bold uppercase rounded-sm">Inquire</a>
+    <nav class="fixed w-full z-50 px-8 py-6 flex justify-between items-center glass">
+        <div class="serif text-2xl font-bold tracking-tighter gold-text">THE READING INDEX</div>
+        <div class="hidden md:flex space-x-8 text-xs uppercase tracking-widest">
+            <a href="#about" class="hover:text-gold-text">About</a>
+            <a href="#team" class="hover:text-gold-text">Team</a>
+            <a href="#contact" class="px-6 py-2 gold-bg text-black font-bold">Inquire</a>
+        </div>
     </nav>
 
-    <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 relative">
-        <h1 class="serif text-5xl md:text-8xl mb-6 leading-tight">Your Words. <br><span class="italic gold-text">Our Masterpiece.</span></h1>
-        <p class="max-w-xl text-zinc-500 text-sm md:text-base mb-10 uppercase tracking-[0.3em]">Architecting the digital presence of world-class authors.</p>
-        <a href="#contact" class="px-10 py-4 bg-[#D4AF37] text-black font-bold uppercase tracking-widest hover:scale-105 transition">Start Building</a>
+    <section class="h-screen flex flex-col justify-center items-center text-center px-4 hero-bg">
+        <h1 class="serif text-6xl md:text-8xl mb-6">Crafting <span class="italic gold-text">Literary</span> Legacies.</h1>
+        <p class="max-w-2xl text-zinc-400 text-sm md:text-base uppercase tracking-[0.4em]">Bespoke digital architecture for the intellectual elite.</p>
     </section>
 
-    <section id="contact" class="py-24 px-6 max-w-3xl mx-auto">
-        <div id="success-message" class="hidden opacity-0 text-center p-12 glass border-[#D4AF37] mb-8 transition-all duration-1000">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2">
-                <path d="M5 13l4 4L19 7"></path>
-            </svg>
-            <h3 class="serif text-3xl gold-text mt-4 mb-2">Message Dispatched</h3>
-            <p class="text-zinc-400 text-sm">Our architects will contact you shortly.</p>
+    <section id="about" class="py-24 px-8 max-w-6xl mx-auto grid md:grid-cols-2 gap-16">
+        <div>
+            <h2 class="serif text-4xl mb-6 gold-text">About Us</h2>
+            <p class="text-zinc-400 leading-relaxed mb-8">The Reading Index is more than a service; it is a sanctuary for stories. We specialize in transforming manuscripts into digital masterpieces, ensuring your voice echoes across the global stage.</p>
+            <div class="p-8 glass border-l-4 border-gold-text">
+                <h3 class="serif text-2xl mb-2 gold-text">Our Mission</h3>
+                <p class="text-sm text-zinc-500 italic">To provide authors with a digital home as profound as their words.</p>
+            </div>
         </div>
+        <div class="flex items-center">
+            <div class="p-8 glass border-r-4 border-gold-text w-full">
+                <h3 class="serif text-2xl mb-2 gold-text">Our Vision</h3>
+                <p class="text-sm text-zinc-500 italic">To redefine literary prestige in the digital age, one author at a time.</p>
+            </div>
+        </div>
+    </section>
 
-        <form action="https://formspree.io/f/xdalqeqq" method="POST" id="luxury-form" class="space-y-8 bg-black p-8 rounded-lg">
-            <input type="text" name="name" placeholder="YOUR NAME" required class="w-full bg-transparent border-b border-zinc-800 py-4 text-white focus:outline-none focus:border-[#D4AF37]">
-            <input type="email" name="email" placeholder="EMAIL ADDRESS" required class="w-full bg-transparent border-b border-zinc-800 py-4 text-white focus:outline-none focus:border-[#D4AF37]">
-            <textarea name="message" placeholder="DESCRIBE YOUR VISION" rows="4" class="w-full bg-transparent border-b border-zinc-800 py-4 text-white focus:outline-none focus:border-[#D4AF37]"></textarea>
-            
-            <button type="submit" id="submit-btn" class="w-full py-5 bg-[#D4AF37] text-black font-bold uppercase tracking-[0.4em] hover:opacity-90 transition relative">
-                <span id="btn-text">Send Submission</span>
-                <div id="btn-loader" class="hidden absolute inset-0 flex items-center justify-center bg-[#D4AF37]">
-                    <div class="w-6 h-6 border-4 border-black border-t-transparent rounded-full animate-spin"></div>
-                </div>
-            </button>
+    <section class="py-24 bg-zinc-950 px-8">
+        <h2 class="serif text-center text-4xl mb-16 gold-text">Acclaimed Reflections</h2>
+        <div class="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            <div class="p-8 glass border border-zinc-800 italic text-zinc-400 text-sm">
+                "A seamless experience. My portfolio feels like a piece of art."
+                <span class="block mt-4 not-italic font-bold gold-text">— Joan Hoffman & Rod Raglin</span>
+            </div>
+            <div class="p-8 glass border border-zinc-800 italic text-zinc-400 text-sm">
+                "The attention to detail is unmatched in the industry."
+                <span class="block mt-4 not-italic font-bold gold-text">— J.D Williams & Cheryl Pierce</span>
+            </div>
+            <div class="p-8 glass border border-zinc-800 italic text-zinc-400 text-sm">
+                "Finally, a team that understands the weight of a writer's legacy."
+                <span class="block mt-4 not-italic font-bold gold-text">— Phillip Cole</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="py-24 px-8 max-w-7xl mx-auto text-center">
+        <h2 class="serif text-5xl mb-16 gold-text">The Architects</h2>
+        <div class="grid md:grid-cols-4 gap-8">
+            <div class="p-6">
+                <h4 class="serif text-xl font-bold">Lee Crown Ademola</h4>
+                <p class="text-xs gold-text uppercase tracking-widest mt-2">CEO & Visionary</p>
+            </div>
+            <div class="p-6">
+                <h4 class="serif text-xl font-bold">Cheryl Lastborn</h4>
+                <p class="text-xs gold-text uppercase tracking-widest mt-2">Technical Specialist</p>
+            </div>
+            <div class="p-6">
+                <h4 class="serif text-xl font-bold">Sandra Williams</h4>
+                <p class="text-xs gold-text uppercase tracking-widest mt-2">Senior Website Specialist</p>
+            </div>
+            <div class="p-6">
+                <h4 class="serif text-xl font-bold">Grey Anderson</h4>
+                <p class="text-xs gold-text uppercase tracking-widest mt-2">Lead Developer & Designer</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 px-8 max-w-3xl mx-auto">
+        <div id="success-box" class="hidden text-center p-12 glass gold-text mb-8">Message Dispatched. Form Cleared.</div>
+        <form action="https://formspree.io/f/xdalqeqq" method="POST" id="luxury-form" class="space-y-6">
+            <input type="text" name="name" placeholder="YOUR NAME" required class="w-full bg-transparent border-b border-zinc-800 py-4 text-white focus:outline-none focus:border-gold-text">
+            <input type="email" name="email" placeholder="EMAIL ADDRESS" required class="w-full bg-transparent border-b border-zinc-800 py-4 text-white focus:outline-none focus:border-gold-text">
+            <textarea name="message" placeholder="YOUR MANUSCRIPT VISION" rows="4" class="w-full bg-transparent border-b border-zinc-800 py-4 text-white focus:outline-none focus:border-gold-text"></textarea>
+            <button type="submit" class="w-full py-5 gold-bg text-black font-bold uppercase tracking-widest hover:scale-[1.02] transition">Send Inquiry</button>
         </form>
     </section>
 
-    <a href="https://wa.me/15739142195" target="_blank" class="fixed bottom-8 right-8 z-50">
+    <a href="https://wa.me/15739142195" target="_blank" class="fixed bottom-10 right-10 z-50">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="w-14 h-14" alt="WhatsApp">
     </a>
 
     <script>
         const form = document.getElementById('luxury-form');
-        const success = document.getElementById('success-message');
-        const btnText = document.getElementById('btn-text');
-        const btnLoader = document.getElementById('btn-loader');
-
         form.addEventListener("submit", async (e) => {
             e.preventDefault();
-            btnText.style.opacity = '0';
-            btnLoader.classList.remove('hidden');
-
-            const response = await fetch(form.action, {
-                method: 'POST',
-                body: new FormData(form),
-                headers: { 'Accept': 'application/json' }
-            });
-
+            const response = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' }});
             if (response.ok) {
-                form.style.display = 'none';
-                success.classList.remove('hidden');
-                setTimeout(() => success.style.opacity = '1', 50);
-            } else {
-                alert("Error sending message.");
-                btnText.style.opacity = '1';
-                btnLoader.classList.add('hidden');
+                form.reset();
+                form.classList.add('hidden');
+                document.getElementById('success-box').classList.remove('hidden');
             }
         });
     </script>
